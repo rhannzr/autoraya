@@ -1,73 +1,84 @@
-# Welcome to your Lovable project
+# 🚗 AutoHub - Vehicle Rental & Sales Management System
 
-## Project info
+![Project Status](https://img.shields.io/badge/Status-Active-success)
+![License](https://img.shields.io/badge/License-MIT-blue)
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+**AutoHub** adalah platform berbasis web modern untuk manajemen penyewaan dan jual beli kendaraan (mobil & motor). Aplikasi ini dirancang untuk memudahkan pelanggan dalam mencari kendaraan impian, sekaligus memberikan kontrol penuh kepada admin untuk mengelola inventaris, transaksi, dan laporan keuangan.
 
-## How can I edit this code?
+## ✨ Fitur Utama
 
-There are several ways of editing your application.
+### 👤 Halaman Pengunjung (Public)
+- **Katalog Kendaraan:** Tampilan grid responsif dengan filter kategori (Sewa/Beli).
+- **Detail Kendaraan:** Spesifikasi lengkap (Mesin, Kapasitas, Harga, dll).
+- **Booking System:**
+  - **Sewa:** Pilih tanggal sewa & hitung estimasi harga otomatis.
+  - **Beli:** Ajukan penawaran atau minat pembelian langsung ke sistem.
+- **Fitur Tambahan:** Halaman FAQ interaktif dan Testimoni pelanggan.
 
-**Use Lovable**
+### 🛡️ Dashboard Admin (CMS)
+- **Manajemen Kendaraan:** Tambah, Edit, Hapus data mobil/motor dengan spesifikasi detail.
+- **Manajemen Sewa:** Setujui/Tolak pesanan masuk, cek status (Aktif/Selesai/Batal).
+- **Manajemen Penjualan:** Pantau pengajuan pembelian dan update status transaksi.
+- **Laporan Keuangan:** Ringkasan pendapatan sewa & jual dengan filter tanggal.
+- **Manajemen Konten:** Edit Testimoni dan FAQ tanpa coding.
+- **Keamanan:** Login admin terproteksi & Row Level Security (RLS).
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+## 🛠️ Teknologi yang Digunakan
 
-Changes made via Lovable will be committed automatically to this repo.
+Project ini dibangun menggunakan tech stack modern untuk performa tinggi dan skalabilitas:
 
-**Use your preferred IDE**
+- **Frontend:** [React](https://reactjs.org/) + [Vite](https://vitejs.dev/)
+- **Language:** [TypeScript](https://www.typescriptlang.org/)
+- **Styling:** [Tailwind CSS](https://tailwindcss.com/) & [shadcn/ui](https://ui.shadcn.com/)
+- **Backend & Database:** [Supabase](https://supabase.com/) (PostgreSQL)
+- **Authentication:** Supabase Auth
+- **Deployment:** Vercel
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## 🚀 Cara Menjalankan Project (Local Development)
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+Ikuti langkah ini jika ingin menjalankan project di komputer lokal Anda:
 
-Follow these steps:
+1.  **Clone Repository**
+    ```bash
+    git clone [https://github.com/username-kamu/auto-hub.git](https://github.com/username-kamu/auto-hub.git)
+    cd auto-hub
+    ```
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+2.  **Install Dependencies**
+    ```bash
+    npm install
+    ```
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+3.  **Konfigurasi Environment (.env)**
+    Buat file `.env` di root folder dan isi dengan kredensial Supabase Anda:
+    ```env
+    VITE_SUPABASE_URL=[https://your-project-url.supabase.co](https://your-project-url.supabase.co)
+    VITE_SUPABASE_ANON_KEY=your-anon-key-here
+    ```
 
-# Step 3: Install the necessary dependencies.
-npm i
+4.  **Jalankan Server**
+    ```bash
+    npm run dev
+    ```
+    Buka browser di `http://localhost:5173`.
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+## 🗄️ Struktur Database (Supabase)
 
-**Edit a file directly in GitHub**
+Aplikasi ini menggunakan tabel-tabel berikut:
+- `profiles`: Data pengguna & admin.
+- `vehicles`: Inventaris kendaraan (termasuk spek lengkap).
+- `rentals`: Transaksi penyewaan.
+- `sales`: Transaksi penjualan.
+- `testimonials`: Data testimoni dinamis.
+- `faqs`: Data pertanyaan umum.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## 👨‍💻 Author
 
-**Use GitHub Codespaces**
+Dikembangkan oleh **Raihan Nizar**.
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+- **GitHub:** [@rhannzr](https://github.com/rhannzr)
+- **Role:** Fullstack Developer
+- **Project:** Portfolio Development
 
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+---
+*Dibuat dengan ❤️ untuk kemudahan transportasi.*
